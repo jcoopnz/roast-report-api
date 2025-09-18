@@ -2,7 +2,7 @@
 <!--toc:start-->
 This is the back-end API for Roast Report - a coffee roast tracking app.
 
-Find out more about this project in the [front-end repo](https://github.com/Jordy1311/roast-report).
+Find out more about this project in the [front-end repo](https://github.com/jcoopnz/roast-report).
 
 You'll find the live project [here](https://roastreport.web.app/).
 
