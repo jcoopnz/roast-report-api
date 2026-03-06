@@ -14,7 +14,16 @@ export interface FieldDefinition {
  * @param id - The string to validate as a MongoDB ObjectId.
  * @returns `true` if the string is a valid ObjectId, otherwise `false`.
  */
-export function isValidObjectId(id: string): boolean {
+export function isValidObjectId(id: string | Array<unknown>): boolean {
+  if (Array.isArray(id)) {
+    return id.every((id) => {
+      if (typeof id === 'string') {
+        return mongoose.Types.ObjectId.isValid(id);
+      }
+      return false;
+    });
+  }
+
   return mongoose.Types.ObjectId.isValid(id);
 }
 
